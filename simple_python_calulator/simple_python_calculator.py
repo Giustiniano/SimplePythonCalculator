@@ -7,7 +7,7 @@ INPUT_FORMAT = re.compile(r"-?\d+\s*[+\-*/]\s*-?\d+")
 def simple_python_calculator(usr_input: str) -> Number:
     if not INPUT_FORMAT.fullmatch(usr_input):
         raise ValueError("Unable to parse string, please try again")
-    return eval(usr_input.strip())
+    return eval(usr_input)
 
 if __name__ == '__main__':
     while True:
